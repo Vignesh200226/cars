@@ -1,0 +1,135 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    padding: 15px 20px;
+    color: yellow;
+    animation: header 2s ease-in-out;
+}
+nav li:hover
+{
+    background-color: rgb(255, 0, 0);
+}
+@keyframes header{
+    0%{
+        transform: translatey(-100%);;
+    }
+}
+
+nav li{
+    display:inline-block ;
+    margin:10px 20px ;
+    font-weight: 600;
+}
+.main{
+    width: 100%;
+    display: flex;
+}
+.content{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    color: white;
+    overflow: hidden;
+    animation: content 2s ease-in-out;
+}
+@keyframes content {
+    0%{
+        opacity: 0;
+        transform: translatex(-40%);
+    }
+    
+}
+.content h1{
+    margin-bottom: 1%;
+    font-size: 80px;
+    letter-spacing: 8px;
+}
+.content h2{
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+span{
+    color: red;
+}
+.content p{
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+button{
+    padding: 15px 30px;
+    background: white;
+    border-radius: 10px;
+    
+    
+}
+button:hover
+{
+    background-color: yellow;
+}
+.image{
+    width: 50%;
+    margin-top: 8%;
+    z-index: -1;
+}
+img{
+    width: 40rem;
+    animation: car 5s ease-in-out;
+}
+@keyframes car {
+    
+    0%{
+        transform: translatex(100%);
+    }
+    100%{
+        transform: translatex(-250%);
+    }
+}
+@media screen and (max-width:1200px) {
+    .content{
+       width: 100%;
+       text-align: center; 
+    }
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 25rem;
+    }
+}
+@media screen and (max-width:576px) {
+    .content{
+       width: 100%;
+       text-align: center; 
+    }
+    .content h1,h2,p{
+        margin-bottom: 5%;
+    }
+
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 30rem;
+    }
+}
